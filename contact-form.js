@@ -21,7 +21,7 @@
   validate();
   
   function sendmail(name, email, msg) {
-    emailjs.send("service_pbszqrs", "template_v7y2e3l", {
+    emailjs.send("service_v9izq8p", "template_v7y2e3l", {
       to_name: "Brian",
       from_name: email,
       message: msg,
