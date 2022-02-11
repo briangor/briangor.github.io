@@ -29,25 +29,68 @@
   }
   
   function emptyerror() {
-    Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Fields cannot be empty!",
-    });
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })    
+    Toast.fire({
+        icon: 'error',
+        text: "Fields cannot be empty!",
+        color: '#fff',
+        background: '#191C1F',
+    }).then(()=>{
+        Toast.close({
+        })
+        console.log("Alert closed")
+        
+    })
+    
+    
   }
   
   function error() {
-    Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Something went wrong!",
-    });
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })    
+    Toast.fire({
+        icon: 'error',
+        text: "Something went wrong!",
+        color: '#fff',
+        background: '#191C1F',
+    })
   }
   
   function success() {
-    Swal.fire({
-      icon: "success",
-      title: "Success...",
-      text: "Successfully sent message",
-    });
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })    
+    Toast.fire({
+        icon: 'success',
+        text: 'Successfully sent message',
+        color: '#fff',
+        background: '#191C1F',
+    })
   }
