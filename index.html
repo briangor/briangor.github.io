@@ -136,27 +136,26 @@
 					</ul>
 			</article>
 
-
 			<!-- Contact -->
 			<article id="contact">
 				<h2 class="major">Contact</h2>
-				<form method="post" action="mailto:briangor13@gmail.com?subject=work">
+				<form method="post">
 					<div class="fields">
 						<div class="field half">
 							<label for="name">Name</label>
-							<input type="text" name="name" id="name" placeholder="Jane Doe" />
+							<input type="text" name="name" id="name" placeholder="Jane Doe" class="username" autofocus required/>
 						</div>
 						<div class="field half">
 							<label for="email">Email</label>
-							<input type="text" name="email" id="email" placeholder="janedoe@mail.com" />
+							<input type="email" name="email" id="email" placeholder="janedoe@mail.com" class="email" required/>
 						</div>
 						<div class="field">
 							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="4" placeholder="Working on the contact form. Find me through email"></textarea>
+							<textarea name="message" id="message" rows="4" class="message" placeholder="Type your message here..." required></textarea>
 						</div>
 					</div>
 					<ul class="actions">
-						<li><input type="submit" value="Send Message" class="primary" /></li>
+						<li><input type="submit" name="submit" id="contact-submit" value="Send Message" class="primary submit" /></li>
 						<li><input type="reset" value="Reset" /></li>
 					</ul>
 				</form>
@@ -172,7 +171,7 @@ Nairobi.
 					<li><a href="https://www.linkedin.com/in/brian-gor-02b29811b/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 					<li><a href="https://www.github.com/briangor/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 				</ul>
-			</article>
+			</article>			
 
 			<!-- Skills -->
 			<article id="elements">
@@ -182,11 +181,11 @@ Nairobi.
 					<p>
 						<ul>
 							<li>Programming Languages: Java, Python, C, C++, MATLAB.</li>
-							<li>Web development: HTML5, CSS3 (SASS/SCSS), JavaScript, TypeScript, Angular, Node.js</li>
+							<li>Web development: HTML, CSS (SASS/SCSS), JavaScript, TypeScript, Angular, Node.js</li>
 							<li>Database management: MySQL, MariaDB, MongoDB</li>
-							<li>Version Control: GitHub, BitBucket</li>
+							<li>Version Control: GitHub, BitBucket, GitLab</li>
 							<li>UI/UX: Figma</li>
-							<li>OS: Windows and Linux operating systems.</li>
+							<li>OS: Linux and Windows</li>
 						</ul>
 					</p>
 
@@ -194,9 +193,9 @@ Nairobi.
 					<hr />
 					<h4>Hello World! - Java</h4>
 					<pre><code>
-Class HelloWorld{
+Class HelloWorld {
     public static void main(String[] args){
-	System.out.print("Hello, World!");
+		System.out.print("Hello, World!");
     }
 }
 					</code></pre>
@@ -212,7 +211,7 @@ Class HelloWorld{
 			<ul class="icons">
 				<li><a href="https://twitter.com/brianxgor/" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 				<li><a href="https://instagram.com/brian.gor/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="https://www.linkedin.com/in/brian-gor-02b29811b/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://www.linkedin.com/in/briangor/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 				<li><a href="https://www.github.com/briangor/" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
 			</ul>
 			<p class="copyright">&copy; Brian Gor 2022</p>
@@ -230,6 +229,10 @@ Class HelloWorld{
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+	<script src="contact-form.js"></script>
 
 </body>
 
