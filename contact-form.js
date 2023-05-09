@@ -15,6 +15,7 @@
       } else {
         sendmail(name.value, email.value, msg.value);
         success();
+        //reset();
       }
     });
   }
@@ -93,4 +94,8 @@
         color: '#fff',
         background: '#191C1F',
     })
+  }
+
+  function reset(){
+   // todo: reset form after submit
   }
